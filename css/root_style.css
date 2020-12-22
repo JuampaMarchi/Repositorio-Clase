@@ -1,0 +1,455 @@
+@keyframes titleAnimation {
+  25% {
+    transform: rotateZ(2deg); }
+  75% {
+    transform: rotateZ(-2deg); } }
+
+.rightbody {
+  display: flex;
+  flex-direction: column;
+  justify-content: end; }
+  .rightbody .rightbody__table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; }
+    .rightbody .rightbody__table .rightbody__table--title {
+      font-family: 'Goldman', sans-serif;
+      font-weight: bold;
+      font-size: 1rem;
+      text-align: center;
+      background-color: honeydew;
+      text-decoration: underline;
+      margin: 10px 0px 10px 0px;
+      padding: 5px 0px 10px 0px;
+      width: 25vw;
+      height: auto; }
+    .rightbody .rightbody__table table {
+      background-color: honeydew; }
+      .rightbody .rightbody__table table .rightbody__table--innertitle {
+        font-family: 'Goldman', sans-serif;
+        font-weight: 900; }
+      .rightbody .rightbody__table table .rightbody__table--item {
+        font-family: 'Goldman', sans-serif;
+        font-size: 16px; }
+        .rightbody .rightbody__table table .rightbody__table--item a {
+          color: #141414; }
+        .rightbody .rightbody__table table .rightbody__table--item a:hover {
+          background-color: #141414;
+          color: honeydew;
+          text-decoration: none; }
+  .rightbody .rightbody__newsbox {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: auto; }
+    .rightbody .rightbody__newsbox .rightbody__newsbox__content {
+      display: grid;
+      grid-template-areas: "picture date" "picture title" "picture comment" "picture article" "picture link";
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: 10% 12% 18% auto 12%;
+      grid-column-gap: 10px;
+      grid-row-gap: 3px;
+      align-items: center;
+      color: honeydew;
+      width: 60vw;
+      height: auto;
+      margin-bottom: 5rem; }
+      .rightbody .rightbody__newsbox .rightbody__newsbox__content a {
+        color: honeydew; }
+      .rightbody .rightbody__newsbox .rightbody__newsbox__content a:hover {
+        background-color: honeydew;
+        color: #141414;
+        text-decoration: none; }
+      .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--image {
+        width: 18vw;
+        height: 90%;
+        grid-area: picture; }
+      .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--date {
+        grid-area: date;
+        font-family: 'Goldman', sans-serif;
+        border-bottom: solid honeydew 1px; }
+      .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--title {
+        grid-area: title;
+        font-family: 'Goldman',sans-serif;
+        font-size: 20px; }
+      .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--comment {
+        grid-area: comment;
+        font-family: 'Dosis', sans-serif;
+        border-bottom: solid honeydew 1px;
+        border-top: solid honeydew 5px; }
+      .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--text {
+        grid-area: article;
+        font-family: 'Dosis', sans-serif; }
+      .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--reference {
+        grid-area: link;
+        font-family: 'Dosis', sans-serif;
+        font-size: large;
+        border-top: solid honeydew 5px; }
+  .rightbody .rightbody__carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .rightbody .rightbody__carousel .rightbody__carousel--title {
+      font-family: 'Goldman', sans-serif;
+      font-weight: bold;
+      font-size: 1rem;
+      text-align: center;
+      background-color: honeydew;
+      text-decoration: underline;
+      margin: 10px 0px 10px 0px;
+      padding: 5px 0px 10px 0px;
+      width: 25vw;
+      height: auto; }
+
+@keyframes titleAnimation {
+  25% {
+    transform: rotateZ(2deg); }
+  75% {
+    transform: rotateZ(-2deg); } }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px 15px 3px 0px;
+  border-right: groove 10px honeydew; }
+  .column .column--title {
+    font-family: 'Goldman', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    font-size: 1rem;
+    width: 25vw;
+    margin: 1rem 0px 2rem 0px;
+    padding: 0.5rem 0px 1rem 0px;
+    background-color: honeydew;
+    text-decoration: underline; }
+  .column .column--title:hover {
+    animation-name: titleAnimation;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 1s; }
+  .column .column__releases {
+    padding: 3px 3px 3px 10px; }
+    .column .column__releases .column__releases--item h4 {
+      font-family: 'Dosis', sans-serif;
+      font-size: 1rem; }
+      .column .column__releases .column__releases--item h4 a {
+        color: honeydew;
+        font-weight: normal; }
+      .column .column__releases .column__releases--item h4 a:hover {
+        background-color: honeydew;
+        color: #141414;
+        text-decoration: none; }
+  .column .column__audiobox {
+    display: flex;
+    flex-direction: column;
+    width: auto; }
+  .column .column__recommended {
+    margin-top: 2rem; }
+    .column .column__recommended .column__recommended--item {
+      font-family: 'Dosis', sans-serif;
+      color: honeydew; }
+    .column .column__recommended span {
+      margin-right: 10px;
+      font-family: 'Dosis', sans-serif;
+      font-style: italic;
+      text-decoration: underline; }
+    .column .column__recommended a {
+      color: honeydew; }
+    .column .column__recommended a:hover {
+      background-color: honeydew;
+      color: #141414;
+      text-decoration: none; }
+
+@keyframes titleAnimation {
+  25% {
+    transform: rotateZ(2deg); }
+  75% {
+    transform: rotateZ(-2deg); } }
+
+@keyframes titleAnimation {
+  25% {
+    transform: rotateZ(2deg); }
+  75% {
+    transform: rotateZ(-2deg); } }
+
+.newsbox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem; }
+  .newsbox .newsbox__article {
+    display: grid;
+    grid-template-areas: "picture date" "picture title" "picture comment" "picture article" "picture link";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 10% 12% 18% auto 12%;
+    grid-column-gap: 10px;
+    grid-row-gap: 3px;
+    align-items: center;
+    width: 60vw;
+    height: auto;
+    color: honeydew;
+    margin-bottom: 5rem; }
+    .newsbox .newsbox__article a {
+      color: honeydew; }
+    .newsbox .newsbox__article a:hover {
+      background-color: honeydew;
+      color: #141414;
+      text-decoration: none; }
+    .newsbox .newsbox__article .newsbox__article--img {
+      grid-area: picture;
+      width: auto;
+      height: auto; }
+    .newsbox .newsbox__article .newsbox__article--date {
+      grid-area: date;
+      font-family: 'Goldman', sans-serif;
+      border-bottom: solid honeydew 1px; }
+    .newsbox .newsbox__article .newsbox__article--title {
+      grid-area: title;
+      font-family: 'Goldman', sans-serif;
+      font-size: 20px; }
+    .newsbox .newsbox__article .newsbox__article--comment {
+      grid-area: comment;
+      font-family: 'Dosis', sans-serif;
+      border-bottom: solid honeydew 1px;
+      border-top: solid honeydew 5px; }
+    .newsbox .newsbox__article .newsbox__article--mainbody {
+      grid-area: article;
+      font-family: 'Dosis', sans-serif; }
+    .newsbox .newsbox__article .newsbox__article--media {
+      grid-area: link;
+      font-family: 'Dosis', sans-serif;
+      font-size: large;
+      border-top: solid honeydew 5px; }
+
+@keyframes titleAnimation {
+  25% {
+    transform: rotateZ(2deg); }
+  75% {
+    transform: rotateZ(-2deg); } }
+
+.mainbox {
+  display: flex;
+  flex-direction: column; }
+  .mainbox .mainbox__formbox--title {
+    font-family: 'Goldman', sans-serif;
+    font-size: 25px;
+    color: honeydew; }
+  .mainbox .mainbox__formbox--subtitle {
+    font-family: 'Goldman', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: none;
+    background-color: none;
+    text-decoration: underline;
+    margin: 0px 0px 10px 0px;
+    color: honeydew;
+    font-weight: normal; }
+  .mainbox .mainbox__formbox {
+    margin: 3px 0px 5px 0px;
+    border: double honeydew 6px; }
+    .mainbox .mainbox__formbox .form-group label, .mainbox .mainbox__formbox .formbox__form--comment label {
+      font-family: 'Dosis', sans-serif;
+      font-size: 20px;
+      color: honeydew;
+      font-style: none; }
+    .mainbox .mainbox__formbox .form-group .formbox__form--data-input:focus, .mainbox .mainbox__formbox .formbox__form--comment .formbox__form--data-input:focus {
+      transform: scale(1.1); }
+    .mainbox .mainbox__formbox .formbox__form--formcomment {
+      font-family: 'Dosis', sans-serif;
+      font-style: italic;
+      color: honeydew;
+      text-decoration: underline; }
+    .mainbox .mainbox__formbox .form-input {
+      margin: 0px 0px 10px 0px; }
+
+@keyframes titleAnimation {
+  25% {
+    transform: rotateZ(2deg); }
+  75% {
+    transform: rotateZ(-2deg); } }
+
+.aboutbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .aboutbox .aboutbox__textbox {
+    width: 60vw;
+    height: auto;
+    padding: 10px 6px 0px 6px;
+    margin: 0px 0px 1rem 0;
+    background-color: #bebebe;
+    border: ridge honeydew 5px; }
+    .aboutbox .aboutbox__textbox .aboutbox__textbox--text {
+      font-family: 'Goldman', sans-serif; }
+
+@keyframes titleAnimation {
+  25% {
+    transform: rotateZ(2deg); }
+  75% {
+    transform: rotateZ(-2deg); } }
+
+.staffbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: honeydew; }
+  .staffbox .staffbox__article {
+    display: grid;
+    grid-template-areas: "picture title" "picture comment" "picture profile" "picture media";
+    grid-template-columns: 1fr, 3fr;
+    grid-template-rows: 15% 15% auto 15%;
+    grid-column-gap: 10px;
+    align-items: center;
+    width: 60vw;
+    height: auto;
+    margin: 2rem 0rem 4rem 0rem;
+    padding: 0px 15px 0px 15px; }
+  .staffbox a {
+    color: honeydew; }
+  .staffbox a:hover {
+    background-color: honeydew;
+    color: #141414;
+    text-decoration: none; }
+  .staffbox .staffbox__article--img {
+    grid-area: picture;
+    width: 18vw;
+    height: 95%; }
+  .staffbox .staffbox__article--title {
+    grid-area: title;
+    font-family: 'Goldman', sans-serif;
+    font-size: 30px; }
+  .staffbox .staffbox__article--comment {
+    grid-area: comment;
+    font-family: 'Goldman', sans-serif;
+    font-style: italic;
+    border-top: solid honeydew 5px;
+    border-bottom: solid honeydew 1px; }
+  .staffbox .staffbox__article--mainbody {
+    grid-area: profile;
+    font-family: 'Dosis',sans-serif; }
+    .staffbox .staffbox__article--mainbody span {
+      font-style: italic;
+      font-weight: bold; }
+      .staffbox .staffbox__article--mainbody span a {
+        text-decoration: underline; }
+      .staffbox .staffbox__article--mainbody span a:hover {
+        background-color: honeydew;
+        color: #141414;
+        text-decoration: none; }
+  .staffbox .staffbox__article__media {
+    grid-area: media;
+    font-family: 'Dosis', sans-serif;
+    border-top: solid honeydew 5px;
+    font-size: large; }
+
+body {
+  background-image: linear-gradient(to bottom right, #141414, #747474); }
+
+header {
+  background-image: url("../media/image/gaming-banner.jpg"); }
+  header .title {
+    display: flex;
+    justify-content: start;
+    margin-left: 20px; }
+    header .title h1 {
+      font-family: 'Goldman', sans-serif;
+      font-weight: bold;
+      font-size: 50px;
+      color: honeydew;
+      transform: skewX(-40deg);
+      transition: all 2s; }
+    header .title h1:hover {
+      transform: skewX(40deg);
+      color: yellowgreen;
+      transition: all 2s; }
+  header .topmenu {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px; }
+    header .topmenu .topmenu__nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      font-family: 'Goldman', sans-serif; }
+      header .topmenu .topmenu__nav ul .topmenu__nav--item {
+        padding-right: 5px;
+        padding-left: 5px;
+        border-right: ridge honeydew 3px; }
+        header .topmenu .topmenu__nav ul .topmenu__nav--item a {
+          color: honeydew; }
+        header .topmenu .topmenu__nav ul .topmenu__nav--item a:hover {
+          background-color: honeydew;
+          color: #141414;
+          text-decoration: none; }
+  header .headertext {
+    background-image: linear-gradient(to left, #747474, honeydew); }
+    header .headertext p {
+      font-size: larger;
+      font-family: 'Goldman', sans-serif;
+      padding: 5px 1px 5px 5px; }
+
+.textbox {
+  font-family: 'Goldman', sans-serif;
+  background-image: linear-gradient(to left, #bebebe, honeydew); }
+  .textbox .textbox--content {
+    font-family: 'Goldman', sans-serif;
+    padding: 5px 1px 5px 3px; }
+    .textbox .textbox--content a {
+      color: #141414;
+      text-decoration: underline;
+      font-style: italic; }
+    .textbox .textbox--content a:hover {
+      font-weight: bold; }
+
+.container-fluid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+footer {
+  background-image: linear-gradient(to right, #141414, #747474); }
+
+.botmenu {
+  padding: 5px 0px 0px 0px;
+  margin: 15px 0px 0px 0px; }
+  .botmenu ul {
+    padding: 5px 0px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    font-family: 'Goldman', sans-serif; }
+    .botmenu ul .botmenu__nav--item {
+      padding-right: 5px;
+      padding-left: 5px;
+      border-right: ridge honeydew 3px; }
+      .botmenu ul .botmenu__nav--item a {
+        color: honeydew; }
+      .botmenu ul .botmenu__nav--item a:hover {
+        background-color: honeydew;
+        color: #141414;
+        text-decoration: none; }
+
+.botbox {
+  background-image: url("../media/image/gaming-banner.jpg"); }
+  .botbox legend {
+    margin: 10px 1px 3px 40px;
+    font-family: 'Goldman', sans-serif;
+    text-decoration: underline;
+    width: 80vw;
+    color: honeydew; }
+  .botbox .botbox__list .botbox__list--item {
+    font-family: 'Dosis', sans-serif;
+    font-style: italic;
+    text-decoration: underline;
+    list-style: none; }
+    .botbox .botbox__list .botbox__list--item a {
+      color: honeydew; }
+    .botbox .botbox__list .botbox__list--item a:hover {
+      background-color: honeydew;
+      color: #141414;
+      text-decoration: none; }
+    .botbox .botbox__list .botbox__list--item img {
+      padding: 0px 0px 0px 10px; }

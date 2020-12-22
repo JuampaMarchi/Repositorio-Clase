@@ -1,0 +1,64 @@
+@import "utilities";
+
+.staffbox{
+    @include flexColumn();
+    justify-content: space-evenly;
+    color: $whiteColor;
+    .staffbox__article{
+        display: grid;
+        grid-template-areas: 
+            "picture title"
+            "picture comment"
+            "picture profile"
+            "picture media";
+        grid-template-columns: 1fr, 3fr;
+        grid-template-rows: 15% 15% auto 15%;
+        grid-column-gap: 10px;
+        align-items: center;
+        @include sizes(60vw, auto);
+        @include margin(2rem, 0rem, 4rem, 0rem);
+        @include padding(0px, 15px, 0px, 15px);
+    }
+    a{
+        color: $whiteColor;
+    }
+    a:hover{
+        @include linkHover();
+    }
+    .staffbox__article--img{
+        grid-area: picture;
+        @include sizes(18vw, 95%);
+    }
+    .staffbox__article--title{
+        grid-area: title;
+        font-family: 'Goldman', sans-serif;
+	    font-size: 30px;
+    }
+    .staffbox__article--comment{
+        grid-area: comment;
+	    font-family: 'Goldman', sans-serif;
+	    font-style: italic;
+	    border-top: solid $whiteColor 5px;
+	    border-bottom: solid $whiteColor 1px;
+    }
+    .staffbox__article--mainbody{
+        grid-area: profile;
+        font-family: 'Dosis',sans-serif;
+        span{
+            font-style: italic;
+            font-weight: bold;
+            a{
+                text-decoration: underline;
+            }
+            a:hover{
+                @include linkHover();
+            }
+        }
+    }
+    .staffbox__article__media{
+        grid-area: media;
+        font-family: 'Dosis', sans-serif;
+        border-top: solid $whiteColor 5px;
+        font-size: large;
+    }
+}
