@@ -11,32 +11,34 @@
   .rightbody .rightbody__table {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px; }
+    margin: 5rem 0rem 10rem 0rem;
+    align-items: center; }
     .rightbody .rightbody__table .rightbody__table--title {
-      font-family: 'Goldman', sans-serif;
+      font-family: "Goldman", sans-serif;
       font-weight: bold;
       font-size: 1rem;
       text-align: center;
-      background-color: honeydew;
+      background-color: #141414;
       text-decoration: underline;
-      margin: 10px 0px 10px 0px;
+      margin: 1rem 0rem 2rem 0rem;
       padding: 5px 0px 10px 0px;
       width: 25vw;
-      height: auto; }
+      height: auto;
+      color: honeydew;
+      font-weight: normal; }
     .rightbody .rightbody__table table {
-      background-color: honeydew; }
+      background-color: #525252;
+      color: honeydew; }
       .rightbody .rightbody__table table .rightbody__table--innertitle {
-        font-family: 'Goldman', sans-serif;
-        font-weight: 900; }
+        font-family: "Goldman", sans-serif; }
       .rightbody .rightbody__table table .rightbody__table--item {
-        font-family: 'Goldman', sans-serif;
+        font-family: "Goldman", sans-serif;
         font-size: 16px; }
         .rightbody .rightbody__table table .rightbody__table--item a {
-          color: #141414; }
+          color: honeydew; }
         .rightbody .rightbody__table table .rightbody__table--item a:hover {
-          background-color: #141414;
-          color: honeydew;
+          background-color: honeydew;
+          color: #141414;
           text-decoration: none; }
   .rightbody .rightbody__newsbox {
     display: flex;
@@ -67,36 +69,39 @@
         grid-area: picture; }
       .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--date {
         grid-area: date;
-        font-family: 'Goldman', sans-serif;
+        font-family: "Goldman", sans-serif;
         border-bottom: solid honeydew 1px; }
       .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--title {
         grid-area: title;
-        font-family: 'Goldman',sans-serif;
+        font-family: "Goldman", sans-serif;
         font-size: 20px; }
       .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--comment {
         grid-area: comment;
-        font-family: 'Dosis', sans-serif;
+        font-family: "Dosis", sans-serif;
         border-bottom: solid honeydew 1px;
         border-top: solid honeydew 5px; }
       .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--text {
         grid-area: article;
-        font-family: 'Dosis', sans-serif; }
+        font-family: "Dosis", sans-serif; }
       .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--reference {
         grid-area: link;
-        font-family: 'Dosis', sans-serif;
+        font-family: "Dosis", sans-serif;
         font-size: large;
         border-top: solid honeydew 5px; }
   .rightbody .rightbody__carousel {
     display: flex;
     flex-direction: column;
+    margin: 10rem 0rem 10rem 0rem;
     align-items: center; }
     .rightbody .rightbody__carousel .rightbody__carousel--title {
-      font-family: 'Goldman', sans-serif;
+      font-family: "Goldman", sans-serif;
       font-weight: bold;
       font-size: 1rem;
       text-align: center;
-      background-color: honeydew;
+      background-color: #141414;
       text-decoration: underline;
+      color: honeydew;
+      font-weight: normal;
       margin: 10px 0px 10px 0px;
       padding: 5px 0px 10px 0px;
       width: 25vw;
@@ -112,18 +117,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3px 15px 3px 0px;
+  margin: 5rem 1rem 5rem 0rem;
   border-right: groove 10px honeydew; }
   .column .column--title {
-    font-family: 'Goldman', sans-serif;
-    font-weight: bold;
+    font-family: "Goldman", sans-serif;
     text-align: center;
     align-items: center;
     font-size: 1rem;
     width: 25vw;
     margin: 1rem 0px 2rem 0px;
     padding: 0.5rem 0px 1rem 0px;
-    background-color: honeydew;
+    background-color: #141414;
+    color: honeydew;
     text-decoration: underline; }
   .column .column--title:hover {
     animation-name: titleAnimation;
@@ -131,9 +136,10 @@
     animation-timing-function: ease-in;
     animation-duration: 1s; }
   .column .column__releases {
-    padding: 3px 3px 3px 10px; }
+    padding: 3px 3px 3px 10px;
+    margin-bottom: 5rem; }
     .column .column__releases .column__releases--item h4 {
-      font-family: 'Dosis', sans-serif;
+      font-family: "Dosis", sans-serif;
       font-size: 1rem; }
       .column .column__releases .column__releases--item h4 a {
         color: honeydew;
@@ -145,15 +151,19 @@
   .column .column__audiobox {
     display: flex;
     flex-direction: column;
-    width: auto; }
+    align-items: center;
+    width: auto;
+    margin-bottom: 5rem; }
+    .column .column__audiobox legend {
+      margin-bottom: 5rem; }
   .column .column__recommended {
     margin-top: 2rem; }
     .column .column__recommended .column__recommended--item {
-      font-family: 'Dosis', sans-serif;
+      font-family: "Dosis", sans-serif;
       color: honeydew; }
     .column .column__recommended span {
       margin-right: 10px;
-      font-family: 'Dosis', sans-serif;
+      font-family: "Dosis", sans-serif;
       font-style: italic;
       text-decoration: underline; }
     .column .column__recommended a {
@@ -178,7 +188,7 @@
 .newsbox {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem; }
+  margin: 5rem 0rem 5rem 0rem; }
   .newsbox .newsbox__article {
     display: grid;
     grid-template-areas: "picture date" "picture title" "picture comment" "picture article" "picture link";
@@ -203,25 +213,27 @@
       height: auto; }
     .newsbox .newsbox__article .newsbox__article--date {
       grid-area: date;
-      font-family: 'Goldman', sans-serif;
+      font-family: "Goldman", sans-serif;
       border-bottom: solid honeydew 1px; }
     .newsbox .newsbox__article .newsbox__article--title {
       grid-area: title;
-      font-family: 'Goldman', sans-serif;
+      font-family: "Goldman", sans-serif;
       font-size: 20px; }
     .newsbox .newsbox__article .newsbox__article--comment {
       grid-area: comment;
-      font-family: 'Dosis', sans-serif;
+      font-family: "Dosis", sans-serif;
       border-bottom: solid honeydew 1px;
       border-top: solid honeydew 5px; }
     .newsbox .newsbox__article .newsbox__article--mainbody {
       grid-area: article;
-      font-family: 'Dosis', sans-serif; }
+      font-family: "Dosis", sans-serif; }
     .newsbox .newsbox__article .newsbox__article--media {
       grid-area: link;
-      font-family: 'Dosis', sans-serif;
+      font-family: "Dosis", sans-serif;
       font-size: large;
       border-top: solid honeydew 5px; }
+  .newsbox #article6 {
+    margin-top: 3rem; }
 
 @keyframes titleAnimation {
   25% {
@@ -231,13 +243,14 @@
 
 .mainbox {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin: 5rem 0rem 2rem 0rem; }
   .mainbox .mainbox__formbox--title {
-    font-family: 'Goldman', sans-serif;
+    font-family: "Goldman", sans-serif;
     font-size: 25px;
     color: honeydew; }
   .mainbox .mainbox__formbox--subtitle {
-    font-family: 'Goldman', sans-serif;
+    font-family: "Goldman", sans-serif;
     font-weight: bold;
     font-size: 25px;
     text-align: none;
@@ -247,17 +260,17 @@
     color: honeydew;
     font-weight: normal; }
   .mainbox .mainbox__formbox {
-    margin: 3px 0px 5px 0px;
+    margin-bottom: 7rem;
     border: double honeydew 6px; }
     .mainbox .mainbox__formbox .form-group label, .mainbox .mainbox__formbox .formbox__form--comment label {
-      font-family: 'Dosis', sans-serif;
+      font-family: "Dosis", sans-serif;
       font-size: 20px;
       color: honeydew;
       font-style: none; }
     .mainbox .mainbox__formbox .form-group .formbox__form--data-input:focus, .mainbox .mainbox__formbox .formbox__form--comment .formbox__form--data-input:focus {
       transform: scale(1.1); }
     .mainbox .mainbox__formbox .formbox__form--formcomment {
-      font-family: 'Dosis', sans-serif;
+      font-family: "Dosis", sans-serif;
       font-style: italic;
       color: honeydew;
       text-decoration: underline; }
@@ -273,16 +286,17 @@
 .aboutbox {
   display: flex;
   flex-direction: column;
+  margin-top: 5rem;
   align-items: center; }
   .aboutbox .aboutbox__textbox {
     width: 60vw;
     height: auto;
     padding: 10px 6px 0px 6px;
-    margin: 0px 0px 1rem 0;
+    margin: 0rem 0rem 8rem 0rem;
     background-color: #bebebe;
     border: ridge honeydew 5px; }
     .aboutbox .aboutbox__textbox .aboutbox__textbox--text {
-      font-family: 'Goldman', sans-serif; }
+      font-family: "Goldman", sans-serif; }
 
 @keyframes titleAnimation {
   25% {
@@ -293,6 +307,7 @@
 .staffbox {
   display: flex;
   flex-direction: column;
+  margin: 3.5rem 0rem 5rem 0rem;
   justify-content: space-evenly;
   color: honeydew; }
   .staffbox .staffbox__article {
@@ -318,17 +333,17 @@
     height: 95%; }
   .staffbox .staffbox__article--title {
     grid-area: title;
-    font-family: 'Goldman', sans-serif;
+    font-family: "Goldman", sans-serif;
     font-size: 30px; }
   .staffbox .staffbox__article--comment {
     grid-area: comment;
-    font-family: 'Goldman', sans-serif;
+    font-family: "Goldman", sans-serif;
     font-style: italic;
     border-top: solid honeydew 5px;
     border-bottom: solid honeydew 1px; }
   .staffbox .staffbox__article--mainbody {
     grid-area: profile;
-    font-family: 'Dosis',sans-serif; }
+    font-family: "Dosis", sans-serif; }
     .staffbox .staffbox__article--mainbody span {
       font-style: italic;
       font-weight: bold; }
@@ -340,7 +355,7 @@
         text-decoration: none; }
   .staffbox .staffbox__article__media {
     grid-area: media;
-    font-family: 'Dosis', sans-serif;
+    font-family: "Dosis", sans-serif;
     border-top: solid honeydew 5px;
     font-size: large; }
 
@@ -354,7 +369,7 @@ header {
     justify-content: start;
     margin-left: 20px; }
     header .title h1 {
-      font-family: 'Goldman', sans-serif;
+      font-family: "Goldman", sans-serif;
       font-weight: bold;
       font-size: 50px;
       color: honeydew;
@@ -372,7 +387,7 @@ header {
       display: flex;
       flex-wrap: wrap;
       list-style: none;
-      font-family: 'Goldman', sans-serif; }
+      font-family: "Goldman", sans-serif; }
       header .topmenu .topmenu__nav ul .topmenu__nav--item {
         padding-right: 5px;
         padding-left: 5px;
@@ -387,14 +402,14 @@ header {
     background-image: linear-gradient(to left, #747474, honeydew); }
     header .headertext p {
       font-size: larger;
-      font-family: 'Goldman', sans-serif;
+      font-family: "Goldman", sans-serif;
       padding: 5px 1px 5px 5px; }
 
 .textbox {
-  font-family: 'Goldman', sans-serif;
+  font-family: "Goldman", sans-serif;
   background-image: linear-gradient(to left, #bebebe, honeydew); }
   .textbox .textbox--content {
-    font-family: 'Goldman', sans-serif;
+    font-family: "Goldman", sans-serif;
     padding: 5px 1px 5px 3px; }
     .textbox .textbox--content a {
       color: #141414;
@@ -420,7 +435,7 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     list-style: none;
-    font-family: 'Goldman', sans-serif; }
+    font-family: "Goldman", sans-serif; }
     .botmenu ul .botmenu__nav--item {
       padding-right: 5px;
       padding-left: 5px;
@@ -436,12 +451,12 @@ footer {
   background-image: url("../media/image/gaming-banner.jpg"); }
   .botbox legend {
     margin: 10px 1px 3px 40px;
-    font-family: 'Goldman', sans-serif;
+    font-family: "Goldman", sans-serif;
     text-decoration: underline;
     width: 80vw;
     color: honeydew; }
   .botbox .botbox__list .botbox__list--item {
-    font-family: 'Dosis', sans-serif;
+    font-family: "Dosis", sans-serif;
     font-style: italic;
     text-decoration: underline;
     list-style: none; }

@@ -1,16 +1,17 @@
 @import "utilities";
 
-.aboutbox{
-    @include flexColumn();
-    align-items: center;
-    .aboutbox__textbox{
-        @include sizes(60vw, auto);
-        @include padding(10px, 6px, 0px, 6px);
-        @include margin(0px, 0px, 1rem, 0);
-        background-color: $lightGreyColor;
-        border: ridge $whiteColor 5px;
-        .aboutbox__textbox--text{
-            font-family: 'Goldman', sans-serif;
-        }
-    }
+.aboutbox {
+	@include flexColumn();
+	margin-top: 5rem;
+	align-items: center;
+	.aboutbox__textbox {
+		@include sizes(60vw, auto);
+		@include padding(10px, 6px, 0px, 6px);
+		@include margin(0rem, 0rem, 8rem, 0rem);
+		background-color: $lightGreyColor;
+		border: ridge $whiteColor 5px;
+		.aboutbox__textbox--text {
+			font-family: "Goldman", sans-serif;
+		}
+	}
 }

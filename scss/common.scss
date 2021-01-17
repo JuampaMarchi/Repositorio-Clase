@@ -1,139 +1,133 @@
-@import "index_content",
-        "left_col",
-        "utilities",
-        "news",
-        "contact",
-        "about",
-        "staff";
+@import "index_content", "left_col", "utilities", "news", "contact", "about",
+	"staff";
 
-
-body{
+body {
 	background-image: linear-gradient(to bottom right, $blackColor, $greyColor);
 }
-header{
-    background-image: url("../media/image/gaming-banner.jpg");
-    .title{
-        display: flex;
-        justify-content: start;
-        margin-left: 20px;
-        h1{
-            font-family: 'Goldman', sans-serif;
-            font-weight: bold;
-            font-size: 50px;
-            color: $whiteColor;
-            transform: skewX(-40deg);
-            transition: all 2s;
-        }
-        h1:hover{
-            transform: skewX(40deg);
-            color: $hoverColor;
-            transition: all 2s;
-        }
-    }
-    .topmenu{
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 20px;
-        .topmenu__nav{
-            ul{
-                display: flex;
-                flex-wrap: wrap;
-                list-style: none;
-                font-family: 'Goldman', sans-serif;
-                .topmenu__nav--item{
-                    padding-right: 5px;
-                    padding-left: 5px;
-                    border-right: ridge $whiteColor 3px;
-                    a{
-                        color: $whiteColor;
-                    }
-                    a:hover{
-                        @include linkHover();
-                    }
-                }
-            }
-        }
-    }
-    .headertext{
-        background-image: linear-gradient(to left, $greyColor, $whiteColor);
-        p{
-            font-size: larger;
-            font-family: 'Goldman', sans-serif;
-            @include padding(5px, 1px, 5px, 5px)
-        }
-    }
+header {
+	background-image: url("../media/image/gaming-banner.jpg");
+	.title {
+		display: flex;
+		justify-content: start;
+		margin-left: 20px;
+		h1 {
+			font-family: "Goldman", sans-serif;
+			font-weight: bold;
+			font-size: 50px;
+			color: $whiteColor;
+			transform: skewX(-40deg);
+			transition: all 2s;
+		}
+		h1:hover {
+			transform: skewX(40deg);
+			color: $hoverColor;
+			transition: all 2s;
+		}
+	}
+	.topmenu {
+		display: flex;
+		justify-content: flex-end;
+		margin-right: 20px;
+		.topmenu__nav {
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				list-style: none;
+				font-family: "Goldman", sans-serif;
+				.topmenu__nav--item {
+					padding-right: 5px;
+					padding-left: 5px;
+					border-right: ridge $whiteColor 3px;
+					a {
+						color: $whiteColor;
+					}
+					a:hover {
+						@include linkHover();
+					}
+				}
+			}
+		}
+	}
+	.headertext {
+		background-image: linear-gradient(to left, $greyColor, $whiteColor);
+		p {
+			font-size: larger;
+			font-family: "Goldman", sans-serif;
+			@include padding(5px, 1px, 5px, 5px);
+		}
+	}
 }
-.textbox{
-    font-family: 'Goldman', sans-serif;
+.textbox {
+	font-family: "Goldman", sans-serif;
 	background-image: linear-gradient(to left, $lightGreyColor, $whiteColor);
-    .textbox--content{
-	    font-family: 'Goldman', sans-serif;
-        @include padding(5px, 1px, 5px, 3px);
-        a{
-            color: $blackColor;
-            text-decoration: underline;
-            font-style: italic;
-        }
-        a:hover{
-            font-weight: bold;
-        }
-    }
+	.textbox--content {
+		font-family: "Goldman", sans-serif;
+		@include padding(5px, 1px, 5px, 3px);
+		a {
+			color: $blackColor;
+			text-decoration: underline;
+			font-style: italic;
+		}
+		a:hover {
+			font-weight: bold;
+		}
+	}
 }
-.container-fluid{
+.container-fluid {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
-footer{
-    background-image: linear-gradient(to right, $blackColor, $greyColor);
+footer {
+	background-image: linear-gradient(to right, $blackColor, $greyColor);
 }
-.botmenu{
-    @include padding(5px, 0px, 0px, 0px);
-    @include margin(15px, 0px, 0px, 0px);
-    ul{
-        @include padding(5px, 0px, 0px, 0px);
-        display: flex;
-	    flex-wrap: wrap;
-	    align-items: center;
-	    list-style: none;
-        font-family: 'Goldman', sans-serif;
-        .botmenu__nav--item{
-            padding-right: 5px;
-	        padding-left: 5px;
-            border-right: ridge $whiteColor 3px;
-            a{
-                color: $whiteColor;
-            }
-            a:hover{
-                @include linkHover();
-            }
-        }
-    }
+.botmenu {
+	@include padding(5px, 0px, 0px, 0px);
+	@include margin(15px, 0px, 0px, 0px);
+	ul {
+		@include padding(5px, 0px, 0px, 0px);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		list-style: none;
+		font-family: "Goldman", sans-serif;
+		.botmenu__nav--item {
+			padding-right: 5px;
+			padding-left: 5px;
+			border-right: ridge $whiteColor 3px;
+			a {
+				color: $whiteColor;
+			}
+			a:hover {
+				@include linkHover();
+			}
+		}
+	}
 }
-.botbox{
-    background-image: url("../media/image/gaming-banner.jpg");
-    legend{
-        @include margin(10px, 1px, 3px, 40px);
-        font-family: 'Goldman', sans-serif;
-	    text-decoration: underline;
-	    width: 80vw;
-	    color: $whiteColor;
-    }
-    .botbox__list{
-        .botbox__list--item{
-            font-family: 'Dosis', sans-serif;
-            font-style: italic;
-            text-decoration: underline;
-            list-style: none;
-            a{
-                color: $whiteColor;
-            }
-            a:hover{
-                @include linkHover();
-            }
-            img{
-                @include padding(0px, 0px, 0px, 10px)
-            }
-        }
-    }
+.botbox {
+	background-image: url("../media/image/gaming-banner.jpg");
+	legend {
+		@include margin(10px, 1px, 3px, 40px);
+		font-family: "Goldman", sans-serif;
+		text-decoration: underline;
+		width: 80vw;
+		color: $whiteColor;
+	}
+	.botbox__list {
+		.botbox__list--item {
+			font-family: "Dosis", sans-serif;
+			font-style: italic;
+			text-decoration: underline;
+			list-style: none;
+			a {
+				color: $whiteColor;
+			}
+			a:hover {
+				@include linkHover();
+			}
+			img {
+				@include padding(0px, 0px, 0px, 10px);
+			}
+		}
+	}
 }

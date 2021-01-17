@@ -1,41 +1,42 @@
 $whiteColor: honeydew;
 $blackColor: rgb(20, 20, 20);
+$darkGreyColor: rgb(82, 82, 82);
 $greyColor: rgb(116, 116, 116);
 $lightGreyColor: rgb(190, 190, 190);
 $hoverColor: yellowgreen;
 
-@mixin sizes($sWidth, $sHeight){
-    width: $sWidth;
-    height: $sHeight;
+@mixin sizes($sWidth, $sHeight) {
+	width: $sWidth;
+	height: $sHeight;
 }
-@mixin padding($pTop, $pRig, $pBot, $pLeft){
-    padding: $pTop $pRig $pBot $pLeft;
+@mixin padding($pTop, $pRig, $pBot, $pLeft) {
+	padding: $pTop $pRig $pBot $pLeft;
 }
-@mixin margin($mTop, $mRig, $mBot, $mLeft){
-    margin: $mTop $mRig $mBot $mLeft;
+@mixin margin($mTop, $mRig, $mBot, $mLeft) {
+	margin: $mTop $mRig $mBot $mLeft;
 }
-@mixin linkHover(){
-    background-color: $whiteColor;
-    color: $blackColor;
-    text-decoration: none;
+@mixin linkHover() {
+	background-color: $whiteColor;
+	color: $blackColor;
+	text-decoration: none;
 }
-@mixin flexColumn(){
-    display: flex;
-    flex-direction: column;
+@mixin flexColumn() {
+	display: flex;
+	flex-direction: column;
 }
-@mixin titleFormat($fontSize, $backColor, $decoration, $align){
-    font-family: 'Goldman', sans-serif;
-    font-weight: bold;
-    font-size: $fontSize;
-    text-align: $align;
-    background-color: $backColor;
-    text-decoration: $decoration;
+@mixin titleFormat($fontSize, $backColor, $decoration, $align) {
+	font-family: "Goldman", sans-serif;
+	font-weight: bold;
+	font-size: $fontSize;
+	text-align: $align;
+	background-color: $backColor;
+	text-decoration: $decoration;
 }
-@keyframes titleAnimation{
-	25%{
+@keyframes titleAnimation {
+	25% {
 		transform: rotateZ(2deg);
 	}
-	75%{
+	75% {
 		transform: rotateZ(-2deg);
 	}
 }

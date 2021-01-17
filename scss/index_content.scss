@@ -1,103 +1,108 @@
 @import "utilities";
 
-.rightbody{
-    @include flexColumn();
-    justify-content: end;
-    .rightbody__table{
-        @include flexColumn();
-        align-items: center;
-        margin-bottom: 20px;
-        .rightbody__table--title{
-            @include titleFormat(1rem, $whiteColor, underline, center);
-	        @include margin(10px, 0px, 10px, 0px);
-            @include padding(5px, 0px, 10px, 0px);
-            @include sizes(25vw, auto);
-        }
-        table{
-            background-color: $whiteColor;
-            .rightbody__table--innertitle{
-                font-family: 'Goldman', sans-serif;
-	            font-weight: 900;
-            }
-            .rightbody__table--item{
-                font-family: 'Goldman', sans-serif;
-                font-size: 16px;
-                a{
-                    color: $blackColor;
-                }
-                a:hover{
-                    background-color: $blackColor;
-                    color: $whiteColor;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-    .rightbody__newsbox{
-        @include flexColumn();
-        @include sizes(60vw, auto);
-        .rightbody__newsbox__content{
-            display: grid;
-            grid-template-areas: 
-                "picture date"
-                "picture title"
-                "picture comment"
-                "picture article"
-                "picture link";
-            grid-template-columns: 1fr 3fr;
-            grid-template-rows: 10% 12% 18% auto 12%;
-            grid-column-gap: 10px;
-            grid-row-gap: 3px;
-            align-items: center;
-            color: $whiteColor;
-            @include sizes(60vw, auto);
-            margin-bottom: 5rem;
-            a{
-                color: $whiteColor;
-            }
-            a:hover{
-                @include linkHover();
-            }
-            .newsbox__content--image{
-                @include sizes(18vw, 90%);
-                grid-area: picture;
-            }
-            .newsbox__content--date{
-                grid-area: date;
-	            font-family: 'Goldman', sans-serif;
-	            border-bottom: solid $whiteColor 1px;
-            }
-            .newsbox__content--title{
-                grid-area: title;
-	            font-family: 'Goldman',sans-serif;
-	            font-size: 20px;
-            }
-            .newsbox__content--comment{
-                grid-area: comment;
-	            font-family: 'Dosis', sans-serif;
-	            border-bottom: solid $whiteColor 1px;
-	            border-top: solid $whiteColor 5px;
-            }
-            .newsbox__content--text{
-                grid-area: article;
-	            font-family: 'Dosis', sans-serif;
-            }
-            .newsbox__content--reference{
-                grid-area: link;
-	            font-family: 'Dosis', sans-serif;
-	            font-size: large;
-	            border-top: solid $whiteColor 5px;
-            }
-        }
-    }
-    .rightbody__carousel{
-        @include flexColumn();
-        align-items: center;
-        .rightbody__carousel--title{
-            @include titleFormat(1rem, $whiteColor, underline, center);
-	        @include margin(10px, 0px, 10px, 0px);
-            @include padding(5px, 0px, 10px, 0px);
-            @include sizes(25vw, auto);
-        }
-    }
+.rightbody {
+	@include flexColumn();
+	justify-content: end;
+	.rightbody__table {
+		@include flexColumn();
+		@include margin(5rem, 0rem, 10rem, 0rem);
+		align-items: center;
+		.rightbody__table--title {
+			@include titleFormat(1rem, $blackColor, underline, center);
+			@include margin(1rem, 0rem, 2rem, 0rem);
+			@include padding(5px, 0px, 10px, 0px);
+			@include sizes(25vw, auto);
+			color: $whiteColor;
+			font-weight: normal;
+		}
+		table {
+			background-color: $darkGreyColor;
+			color: $whiteColor;
+			.rightbody__table--innertitle {
+				font-family: "Goldman", sans-serif;
+			}
+			.rightbody__table--item {
+				font-family: "Goldman", sans-serif;
+				font-size: 16px;
+				a {
+					color: $whiteColor;
+				}
+				a:hover {
+					background-color: $whiteColor;
+					color: $blackColor;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.rightbody__newsbox {
+		@include flexColumn();
+		@include sizes(60vw, auto);
+		.rightbody__newsbox__content {
+			display: grid;
+			grid-template-areas:
+				"picture date"
+				"picture title"
+				"picture comment"
+				"picture article"
+				"picture link";
+			grid-template-columns: 1fr 3fr;
+			grid-template-rows: 10% 12% 18% auto 12%;
+			grid-column-gap: 10px;
+			grid-row-gap: 3px;
+			align-items: center;
+			color: $whiteColor;
+			@include sizes(60vw, auto);
+			margin-bottom: 5rem;
+			a {
+				color: $whiteColor;
+			}
+			a:hover {
+				@include linkHover();
+			}
+			.newsbox__content--image {
+				@include sizes(18vw, 90%);
+				grid-area: picture;
+			}
+			.newsbox__content--date {
+				grid-area: date;
+				font-family: "Goldman", sans-serif;
+				border-bottom: solid $whiteColor 1px;
+			}
+			.newsbox__content--title {
+				grid-area: title;
+				font-family: "Goldman", sans-serif;
+				font-size: 20px;
+			}
+			.newsbox__content--comment {
+				grid-area: comment;
+				font-family: "Dosis", sans-serif;
+				border-bottom: solid $whiteColor 1px;
+				border-top: solid $whiteColor 5px;
+			}
+			.newsbox__content--text {
+				grid-area: article;
+				font-family: "Dosis", sans-serif;
+			}
+			.newsbox__content--reference {
+				grid-area: link;
+				font-family: "Dosis", sans-serif;
+				font-size: large;
+				border-top: solid $whiteColor 5px;
+			}
+		}
+	}
+	.rightbody__carousel {
+		@include flexColumn();
+		@include margin(10rem, 0rem, 10rem, 0rem);
+		align-items: center;
+		.rightbody__carousel--title {
+			@include titleFormat(1rem, $blackColor, underline, center);
+			color: $whiteColor;
+			font-weight: normal;
+			@include margin(10px, 0px, 10px, 0px);
+			@include padding(5px, 0px, 10px, 0px);
+			@include sizes(25vw, auto);
+		}
+	}
 }

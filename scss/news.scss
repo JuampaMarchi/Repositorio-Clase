@@ -1,60 +1,62 @@
 @import "utilities";
 
-.newsbox{
-    @include flexColumn();
-    margin-bottom: 2rem;
-    .newsbox__article{
-        display: grid;
-        grid-template-areas: 
-            "picture date"
-            "picture title"
-            "picture comment"
-            "picture article"
-            "picture link";
-        grid-template-columns: 1fr 3fr;
-        grid-template-rows: 10% 12% 18% auto 12%;
-        grid-column-gap: 10px;
-        grid-row-gap: 3px;
-        align-items: center;
-        @include sizes(60vw, auto);
-        color: $whiteColor;
-        margin-bottom: 5rem;
-        a{
-            color: $whiteColor;
-        }
-        a:hover{
-            @include linkHover();
-        }
-        .newsbox__article--img{
-            grid-area: picture;
-            @include sizes(auto, auto);
-            
-        }
-        .newsbox__article--date{
-            grid-area: date;
-            font-family: 'Goldman', sans-serif;
-            border-bottom: solid $whiteColor 1px;
-        }
-        .newsbox__article--title{
-            grid-area: title;
-            font-family: 'Goldman', sans-serif;
-            font-size: 20px;
-        }
-        .newsbox__article--comment{
-            grid-area: comment;
-	        font-family: 'Dosis', sans-serif;
-	        border-bottom: solid $whiteColor 1px;
-	        border-top: solid $whiteColor 5px;
-        }
-        .newsbox__article--mainbody{
-            grid-area: article;
-            font-family: 'Dosis', sans-serif;
-        }
-        .newsbox__article--media{
-            grid-area: link;
-	        font-family: 'Dosis', sans-serif;
-	        font-size: large;
-	        border-top: solid $whiteColor 5px;
-        }
-    }
+.newsbox {
+	@include flexColumn();
+	@include margin(5rem, 0rem, 5rem, 0rem);
+	.newsbox__article {
+		display: grid;
+		grid-template-areas:
+			"picture date"
+			"picture title"
+			"picture comment"
+			"picture article"
+			"picture link";
+		grid-template-columns: 1fr 3fr;
+		grid-template-rows: 10% 12% 18% auto 12%;
+		grid-column-gap: 10px;
+		grid-row-gap: 3px;
+		align-items: center;
+		@include sizes(60vw, auto);
+		color: $whiteColor;
+		margin-bottom: 5rem;
+		a {
+			color: $whiteColor;
+		}
+		a:hover {
+			@include linkHover();
+		}
+		.newsbox__article--img {
+			grid-area: picture;
+			@include sizes(auto, auto);
+		}
+		.newsbox__article--date {
+			grid-area: date;
+			font-family: "Goldman", sans-serif;
+			border-bottom: solid $whiteColor 1px;
+		}
+		.newsbox__article--title {
+			grid-area: title;
+			font-family: "Goldman", sans-serif;
+			font-size: 20px;
+		}
+		.newsbox__article--comment {
+			grid-area: comment;
+			font-family: "Dosis", sans-serif;
+			border-bottom: solid $whiteColor 1px;
+			border-top: solid $whiteColor 5px;
+		}
+		.newsbox__article--mainbody {
+			grid-area: article;
+			font-family: "Dosis", sans-serif;
+		}
+		.newsbox__article--media {
+			grid-area: link;
+			font-family: "Dosis", sans-serif;
+			font-size: large;
+			border-top: solid $whiteColor 5px;
+		}
+	}
+	#article6 {
+		margin-top: 3rem;
+	}
 }

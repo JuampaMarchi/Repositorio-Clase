@@ -1,43 +1,44 @@
 @import "utilities";
 
-.mainbox{
-    @include flexColumn();
-    .mainbox__formbox--title{
-        font-family: 'Goldman', sans-serif;
-	    font-size: 25px;
-	    color: honeydew;
-    }
-    .mainbox__formbox--subtitle{
-        @include titleFormat(25px, none, underline, none);
-        @include margin(0px, 0px, 10px, 0px);
-        color: $whiteColor;
-        font-weight: normal;
-    }
-    .mainbox__formbox{
-        @include margin(3px, 0px, 5px, 0px);
-        border: double $whiteColor 6px;
-        .form-group{
-            label{
-                font-family: 'Dosis', sans-serif;
-	            font-size: 20px;
-                color: $whiteColor;
-                font-style: none;
-            }
-            .formbox__form--data-input:focus{
-                transform: scale(1.1);
-            }
-        }
-        .formbox__form--comment{
-            @extend .form-group;
-        }
-        .formbox__form--formcomment{
-            font-family: 'Dosis', sans-serif;
-            font-style: italic;
-            color: $whiteColor;
-            text-decoration: underline;
-        }
-        .form-input{
-            @include margin(0px, 0px, 10px, 0px);
-        }
-    }
+.mainbox {
+	@include flexColumn();
+	@include margin(5rem, 0rem, 2rem, 0rem);
+	.mainbox__formbox--title {
+		font-family: "Goldman", sans-serif;
+		font-size: 25px;
+		color: honeydew;
+	}
+	.mainbox__formbox--subtitle {
+		@include titleFormat(25px, none, underline, none);
+		@include margin(0px, 0px, 10px, 0px);
+		color: $whiteColor;
+		font-weight: normal;
+	}
+	.mainbox__formbox {
+		margin-bottom: 7rem;
+		border: double $whiteColor 6px;
+		.form-group {
+			label {
+				font-family: "Dosis", sans-serif;
+				font-size: 20px;
+				color: $whiteColor;
+				font-style: none;
+			}
+			.formbox__form--data-input:focus {
+				transform: scale(1.1);
+			}
+		}
+		.formbox__form--comment {
+			@extend .form-group;
+		}
+		.formbox__form--formcomment {
+			font-family: "Dosis", sans-serif;
+			font-style: italic;
+			color: $whiteColor;
+			text-decoration: underline;
+		}
+		.form-input {
+			@include margin(0px, 0px, 10px, 0px);
+		}
+	}
 }
