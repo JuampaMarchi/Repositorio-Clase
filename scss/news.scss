@@ -21,6 +21,7 @@
 		margin-bottom: 5rem;
 		a {
 			color: $whiteColor;
+			text-decoration: underline;
 		}
 		a:hover {
 			@include linkHover();
@@ -58,5 +59,48 @@
 	}
 	#article6 {
 		margin-top: 3rem;
+	}
+}
+@media (max-width: 991px) {
+	.newsbox {
+		align-items: center;
+		.newsbox__article {
+			@include sizes(80vw, auto);
+			.newsbox__article--img {
+				@include sizes(25vw, 95%);
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.newsbox {
+		.newsbox__article {
+			@include flexColumn();
+			@include sizes(80vw, auto);
+			align-items: center;
+			.newsbox__article--img {
+				@include sizes(60vw, 30rem);
+			}
+			.newsbox__article--date {
+				margin-top: 2rem;
+				text-align: right;
+			}
+			.newsbox__article--title {
+				@include padding(1rem, 0rem, 1rem, 0rem);
+				text-align: center;
+			}
+			.newsbox__article--comment {
+				@include padding(1rem, 0rem, 1rem, 0rem);
+				text-align: center;
+			}
+			.newsbox__article--mainbody {
+				@include padding(1rem, 0rem, 1rem, 0rem);
+				text-align: center;
+			}
+			.newsbox__article--media {
+				@include padding(1rem, 0rem, 1rem, 0rem);
+				text-align: center;
+			}
+		}
 	}
 }

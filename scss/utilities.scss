@@ -30,6 +30,7 @@ $hoverColor: yellowgreen;
 	font-size: $fontSize;
 	text-align: $align;
 	background-color: $backColor;
+	border-radius: 40%;
 	text-decoration: $decoration;
 }
 @keyframes titleAnimation {

@@ -7,7 +7,8 @@
 .rightbody {
   display: flex;
   flex-direction: column;
-  justify-content: end; }
+  width: auto;
+  justify-content: center; }
   .rightbody .rightbody__table {
     display: flex;
     flex-direction: column;
@@ -19,6 +20,7 @@
       font-size: 1rem;
       text-align: center;
       background-color: #141414;
+      border-radius: 40%;
       text-decoration: underline;
       margin: 1rem 0rem 2rem 0rem;
       padding: 5px 0px 10px 0px;
@@ -44,7 +46,8 @@
     display: flex;
     flex-direction: column;
     width: 60vw;
-    height: auto; }
+    height: auto;
+    align-items: center; }
     .rightbody .rightbody__newsbox .rightbody__newsbox__content {
       display: grid;
       grid-template-areas: "picture date" "picture title" "picture comment" "picture article" "picture link";
@@ -54,11 +57,10 @@
       grid-row-gap: 3px;
       align-items: center;
       color: honeydew;
-      width: 60vw;
-      height: auto;
       margin-bottom: 5rem; }
       .rightbody .rightbody__newsbox .rightbody__newsbox__content a {
-        color: honeydew; }
+        color: honeydew;
+        text-decoration: underline; }
       .rightbody .rightbody__newsbox .rightbody__newsbox__content a:hover {
         background-color: honeydew;
         color: #141414;
@@ -88,6 +90,20 @@
         font-family: "Dosis", sans-serif;
         font-size: large;
         border-top: solid honeydew 5px; }
+    .rightbody .rightbody__newsbox .rightbody__newsbox--title {
+      font-family: "Goldman", sans-serif;
+      font-weight: bold;
+      font-size: 1rem;
+      text-align: center;
+      background-color: #141414;
+      border-radius: 40%;
+      text-decoration: underline;
+      color: honeydew;
+      font-weight: normal;
+      margin: 2rem 0rem 5rem 0rem;
+      padding: 5px 0px 10px 0px;
+      width: 25vw;
+      height: auto; }
   .rightbody .rightbody__carousel {
     display: flex;
     flex-direction: column;
@@ -99,13 +115,22 @@
       font-size: 1rem;
       text-align: center;
       background-color: #141414;
+      border-radius: 40%;
       text-decoration: underline;
       color: honeydew;
       font-weight: normal;
-      margin: 10px 0px 10px 0px;
+      margin: 2rem 0rem 5rem 0rem;
       padding: 5px 0px 10px 0px;
       width: 25vw;
       height: auto; }
+
+@media (max-width: 991px) {
+  .rightbody {
+    justify-content: space-between;
+    align-items: center; }
+    .rightbody .rightbody__newsbox {
+      width: 85vw;
+      height: auto; } }
 
 @keyframes titleAnimation {
   25% {
@@ -128,6 +153,7 @@
     margin: 1rem 0px 2rem 0px;
     padding: 0.5rem 0px 1rem 0px;
     background-color: #141414;
+    border-radius: 40%;
     color: honeydew;
     text-decoration: underline; }
   .column .column--title:hover {
@@ -137,6 +163,9 @@
     animation-duration: 1s; }
   .column .column__releases {
     padding: 3px 3px 3px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 5rem; }
     .column .column__releases .column__releases--item h4 {
       font-family: "Dosis", sans-serif;
@@ -156,7 +185,12 @@
     margin-bottom: 5rem; }
     .column .column__audiobox legend {
       margin-bottom: 5rem; }
+    .column .column__audiobox .column__audiobox--gif {
+      margin-top: 5rem; }
   .column .column__recommended {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 2rem; }
     .column .column__recommended .column__recommended--item {
       font-family: "Dosis", sans-serif;
@@ -172,6 +206,25 @@
       background-color: honeydew;
       color: #141414;
       text-decoration: none; }
+
+@media (max-width: 991px) {
+  .column {
+    border-right: none;
+    margin: 5rem 0rem 5rem 0rem;
+    width: 80vw; }
+    .column .column--title {
+      width: 40vw;
+      height: auto; } }
+
+@media (max-width: 730px) {
+  .column .column--title {
+    width: 50vw;
+    height: auto; } }
+
+@media (max-width: 560px) {
+  .column .column--title {
+    width: 60vw;
+    height: auto; } }
 
 @keyframes titleAnimation {
   25% {
@@ -202,7 +255,8 @@
     color: honeydew;
     margin-bottom: 5rem; }
     .newsbox .newsbox__article a {
-      color: honeydew; }
+      color: honeydew;
+      text-decoration: underline; }
     .newsbox .newsbox__article a:hover {
       background-color: honeydew;
       color: #141414;
@@ -235,6 +289,42 @@
   .newsbox #article6 {
     margin-top: 3rem; }
 
+@media (max-width: 991px) {
+  .newsbox {
+    align-items: center; }
+    .newsbox .newsbox__article {
+      width: 80vw;
+      height: auto; }
+      .newsbox .newsbox__article .newsbox__article--img {
+        width: 25vw;
+        height: 95%; } }
+
+@media (max-width: 768px) {
+  .newsbox .newsbox__article {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: auto;
+    align-items: center; }
+    .newsbox .newsbox__article .newsbox__article--img {
+      width: 60vw;
+      height: 30rem; }
+    .newsbox .newsbox__article .newsbox__article--date {
+      margin-top: 2rem;
+      text-align: right; }
+    .newsbox .newsbox__article .newsbox__article--title {
+      padding: 1rem 0rem 1rem 0rem;
+      text-align: center; }
+    .newsbox .newsbox__article .newsbox__article--comment {
+      padding: 1rem 0rem 1rem 0rem;
+      text-align: center; }
+    .newsbox .newsbox__article .newsbox__article--mainbody {
+      padding: 1rem 0rem 1rem 0rem;
+      text-align: center; }
+    .newsbox .newsbox__article .newsbox__article--media {
+      padding: 1rem 0rem 1rem 0rem;
+      text-align: center; } }
+
 @keyframes titleAnimation {
   25% {
     transform: rotateZ(2deg); }
@@ -255,6 +345,7 @@
     font-size: 25px;
     text-align: none;
     background-color: none;
+    border-radius: 40%;
     text-decoration: underline;
     margin: 0px 0px 10px 0px;
     color: honeydew;
@@ -277,6 +368,12 @@
     .mainbox .mainbox__formbox .form-input {
       margin: 0px 0px 10px 0px; }
 
+@media (max-width: 414px) {
+  .mainbox .mainbox__formbox .form-group #submit-btn, .mainbox .mainbox__formbox .formbox__form--comment #submit-btn {
+    margin-top: 2rem; }
+  .mainbox .mainbox__formbox .form-group #reset-btn, .mainbox .mainbox__formbox .formbox__form--comment #reset-btn {
+    margin-top: 2rem; } }
+
 @keyframes titleAnimation {
   25% {
     transform: rotateZ(2deg); }
@@ -297,6 +394,16 @@
     border: ridge honeydew 5px; }
     .aboutbox .aboutbox__textbox .aboutbox__textbox--text {
       font-family: "Goldman", sans-serif; }
+
+@media (max-width: 991px) {
+  .aboutbox .aboutbox__textbox {
+    width: 70vw;
+    height: auto; } }
+
+@media (max-width: 768px) {
+  .aboutbox .aboutbox__textbox {
+    width: 80vw;
+    height: auto; } }
 
 @keyframes titleAnimation {
   25% {
@@ -319,7 +426,7 @@
     align-items: center;
     width: 60vw;
     height: auto;
-    margin: 2rem 0rem 4rem 0rem;
+    margin: 2rem 0rem 9rem 0rem;
     padding: 0px 15px 0px 15px; }
   .staffbox a {
     color: honeydew; }
@@ -358,6 +465,44 @@
     font-family: "Dosis", sans-serif;
     border-top: solid honeydew 5px;
     font-size: large; }
+    .staffbox .staffbox__article__media a img {
+      margin-left: 1rem; }
+    .staffbox .staffbox__article__media a:hover {
+      background-color: transparent; }
+
+@media (max-width: 991px) {
+  .staffbox {
+    align-items: center; }
+    .staffbox .staffbox__article {
+      width: 80vw;
+      height: auto; }
+      .staffbox .staffbox__article .staffbox__article--img {
+        width: 25vw;
+        height: 95%; } }
+
+@media (max-width: 768px) {
+  .staffbox .staffbox__article {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: auto;
+    align-items: center; }
+    .staffbox .staffbox__article .staffbox__article--img {
+      width: 60vw;
+      height: auto; }
+    .staffbox .staffbox__article .staffbox__article--title {
+      margin-top: 2rem;
+      text-align: center; }
+    .staffbox .staffbox__article .staffbox__article--comment {
+      padding: 1rem 0rem 1rem 0rem;
+      text-align: center; }
+    .staffbox .staffbox__article .staffbox__article--mainbody {
+      padding: 1rem 0rem 1rem 0rem;
+      text-align: center; }
+    .staffbox .staffbox__article .staffbox__article__media {
+      padding: 1rem 0rem 1rem 0rem;
+      display: flex;
+      align-items: center; } }
 
 body {
   background-image: linear-gradient(to bottom right, #141414, #747474); }
@@ -377,7 +522,6 @@ header {
       transition: all 2s; }
     header .title h1:hover {
       transform: skewX(40deg);
-      color: yellowgreen;
       transition: all 2s; }
   header .topmenu {
     display: flex;
@@ -428,32 +572,26 @@ footer {
 
 .botmenu {
   padding: 5px 0px 0px 0px;
-  margin: 15px 0px 0px 0px; }
-  .botmenu ul {
-    padding: 5px 0px 0px 0px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    list-style: none;
-    font-family: "Goldman", sans-serif; }
-    .botmenu ul .botmenu__nav--item {
-      padding-right: 5px;
-      padding-left: 5px;
-      border-right: ridge honeydew 3px; }
-      .botmenu ul .botmenu__nav--item a {
-        color: honeydew; }
-      .botmenu ul .botmenu__nav--item a:hover {
-        background-color: honeydew;
-        color: #141414;
-        text-decoration: none; }
+  margin: 15px 0px 0px 0px;
+  border-top: ridge honeydew 0.5rem; }
+  .botmenu h5 {
+    margin-right: 2rem;
+    text-align: right;
+    font-family: "Goldman", sans-serif;
+    font-size: 1rem; }
+    .botmenu h5 a {
+      color: #141414; }
+    .botmenu h5 a:hover {
+      font-weight: bold;
+      text-decoration: underline; }
 
 .botbox {
   background-image: url("../media/image/gaming-banner.jpg"); }
   .botbox legend {
     margin: 10px 1px 3px 40px;
+    width: auto;
     font-family: "Goldman", sans-serif;
     text-decoration: underline;
-    width: 80vw;
     color: honeydew; }
   .botbox .botbox__list .botbox__list--item {
     font-family: "Dosis", sans-serif;
@@ -468,3 +606,20 @@ footer {
       text-decoration: none; }
     .botbox .botbox__list .botbox__list--item img {
       padding: 0px 0px 0px 10px; }
+
+@media (max-width: 991px) {
+  .container-fluid {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse; } }
+
+@media (max-width: 725px) {
+  header .title {
+    margin-left: 0px;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    header .title h1 {
+      transform: none; }
+    header .title h1:hover {
+      transform: none; } }

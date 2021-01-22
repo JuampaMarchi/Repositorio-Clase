@@ -42,3 +42,18 @@
 		}
 	}
 }
+
+@media (max-width: 414px) {
+	.mainbox {
+		.mainbox__formbox {
+			.form-group {
+				#submit-btn {
+					margin-top: 2rem;
+				}
+				#reset-btn {
+					margin-top: 2rem;
+				}
+			}
+		}
+	}
+}

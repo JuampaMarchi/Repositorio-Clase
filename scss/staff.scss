@@ -17,7 +17,7 @@
 		grid-column-gap: 10px;
 		align-items: center;
 		@include sizes(60vw, auto);
-		@include margin(2rem, 0rem, 4rem, 0rem);
+		@include margin(2rem, 0rem, 9rem, 0rem);
 		@include padding(0px, 15px, 0px, 15px);
 	}
 	a {
@@ -61,5 +61,53 @@
 		font-family: "Dosis", sans-serif;
 		border-top: solid $whiteColor 5px;
 		font-size: large;
+		a {
+			img {
+				margin-left: 1rem;
+			}
+		}
+		a:hover {
+			background-color: transparent;
+		}
+	}
+}
+@media (max-width: 991px) {
+	.staffbox {
+		align-items: center;
+		.staffbox__article {
+			@include sizes(80vw, auto);
+			.staffbox__article--img {
+				@include sizes(25vw, 95%);
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.staffbox {
+		.staffbox__article {
+			@include flexColumn();
+			@include sizes(80vw, auto);
+			align-items: center;
+			.staffbox__article--img {
+				@include sizes(60vw, auto);
+			}
+			.staffbox__article--title {
+				margin-top: 2rem;
+				text-align: center;
+			}
+			.staffbox__article--comment {
+				@include padding(1rem, 0rem, 1rem, 0rem);
+				text-align: center;
+			}
+			.staffbox__article--mainbody {
+				@include padding(1rem, 0rem, 1rem, 0rem);
+				text-align: center;
+			}
+			.staffbox__article__media {
+				@include padding(1rem, 0rem, 1rem, 0rem);
+				display: flex;
+				align-items: center;
+			}
+		}
 	}
 }

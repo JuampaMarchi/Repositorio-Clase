@@ -2,7 +2,8 @@
 
 .rightbody {
 	@include flexColumn();
-	justify-content: end;
+	width: auto;
+	justify-content: center;
 	.rightbody__table {
 		@include flexColumn();
 		@include margin(5rem, 0rem, 10rem, 0rem);
@@ -38,6 +39,7 @@
 	.rightbody__newsbox {
 		@include flexColumn();
 		@include sizes(60vw, auto);
+		align-items: center;
 		.rightbody__newsbox__content {
 			display: grid;
 			grid-template-areas:
@@ -52,10 +54,10 @@
 			grid-row-gap: 3px;
 			align-items: center;
 			color: $whiteColor;
-			@include sizes(60vw, auto);
 			margin-bottom: 5rem;
 			a {
 				color: $whiteColor;
+				text-decoration: underline;
 			}
 			a:hover {
 				@include linkHover();
@@ -91,6 +93,14 @@
 				border-top: solid $whiteColor 5px;
 			}
 		}
+		.rightbody__newsbox--title {
+			@include titleFormat(1rem, $blackColor, underline, center);
+			color: $whiteColor;
+			font-weight: normal;
+			@include margin(2rem, 0rem, 5rem, 0rem);
+			@include padding(5px, 0px, 10px, 0px);
+			@include sizes(25vw, auto);
+		}
 	}
 	.rightbody__carousel {
 		@include flexColumn();
@@ -100,9 +110,20 @@
 			@include titleFormat(1rem, $blackColor, underline, center);
 			color: $whiteColor;
 			font-weight: normal;
-			@include margin(10px, 0px, 10px, 0px);
+			@include margin(2rem, 0rem, 5rem, 0rem);
 			@include padding(5px, 0px, 10px, 0px);
 			@include sizes(25vw, auto);
+		}
+	}
+}
+@media (max-width: 991px) {
+	.rightbody {
+		justify-content: space-between;
+		align-items: center;
+		.rightbody__newsbox {
+			@include sizes(85vw, auto);
+		}
+		.rightbody__carousel {
 		}
 	}
 }

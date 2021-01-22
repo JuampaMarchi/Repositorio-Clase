@@ -15,3 +15,17 @@
 		}
 	}
 }
+@media (max-width: 991px) {
+	.aboutbox {
+		.aboutbox__textbox {
+			@include sizes(70vw, auto);
+		}
+	}
+}
+@media (max-width: 768px) {
+	.aboutbox {
+		.aboutbox__textbox {
+			@include sizes(80vw, auto);
+		}
+	}
+}

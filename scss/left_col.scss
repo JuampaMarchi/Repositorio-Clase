@@ -15,6 +15,7 @@
 		@include margin(1rem, 0px, 2rem, 0px);
 		@include padding(0.5rem, 0px, 1rem, 0px);
 		background-color: $blackColor;
+		border-radius: 40%;
 		color: $whiteColor;
 		text-decoration: underline;
 	}
@@ -26,6 +27,9 @@
 	}
 	.column__releases {
 		@include padding(3px, 3px, 3px, 10px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		margin-bottom: 5rem;
 		.column__releases--item {
 			h4 {
@@ -50,8 +54,14 @@
 		legend {
 			margin-bottom: 5rem;
 		}
+		.column__audiobox--gif {
+			margin-top: 5rem;
+		}
 	}
 	.column__recommended {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		margin-top: 2rem;
 		.column__recommended--item {
 			font-family: "Dosis", sans-serif;
@@ -68,6 +78,30 @@
 		}
 		a:hover {
 			@include linkHover();
+		}
+	}
+}
+@media (max-width: 991px) {
+	.column {
+		border-right: none;
+		@include margin(5rem, 0rem, 5rem, 0rem);
+		width: 80vw;
+		.column--title {
+			@include sizes(40vw, auto);
+		}
+	}
+}
+@media (max-width: 730px) {
+	.column {
+		.column--title {
+			@include sizes(50vw, auto);
+		}
+	}
+}
+@media (max-width: 560px) {
+	.column {
+		.column--title {
+			@include sizes(60vw, auto);
 		}
 	}
 }
