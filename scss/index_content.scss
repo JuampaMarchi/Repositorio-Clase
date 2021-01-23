@@ -21,6 +21,7 @@
 			color: $whiteColor;
 			.rightbody__table--innertitle {
 				font-family: "Goldman", sans-serif;
+				font-weight: normal;
 			}
 			.rightbody__table--item {
 				font-family: "Goldman", sans-serif;
@@ -120,10 +121,86 @@
 	.rightbody {
 		justify-content: space-between;
 		align-items: center;
+		.rightbody__table {
+			.rightbody__table--title {
+				@include sizes(50vw, auto);
+			}
+		}
 		.rightbody__newsbox {
 			@include sizes(85vw, auto);
+			.rightbody__newsbox--title {
+				@include sizes(50vw, auto);
+			}
 		}
 		.rightbody__carousel {
+			.rightbody__carousel--title {
+				@include sizes(50vw, auto);
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.rightbody {
+		.rightbody__newsbox {
+			.rightbody__newsbox__content {
+				@include flexColumn();
+				.newsbox__content--image {
+					@include sizes(60vw, 30rem);
+				}
+				.newsbox__content--date {
+					margin-top: 2rem;
+					text-align: right;
+				}
+				.newsbox__content--title {
+					@include padding(1rem, 0rem, 1rem, 0rem);
+					text-align: center;
+				}
+				.newsbox__content--comment {
+					@include padding(1rem, 0rem, 1rem, 0rem);
+					text-align: center;
+				}
+				.newsbox__content--text {
+					@include padding(1rem, 0rem, 1rem, 0rem);
+					text-align: center;
+				}
+				.newsbox__content--media {
+					@include padding(1rem, 0rem, 1rem, 0rem);
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 520px) {
+	.rightbody {
+		.rightbody__table {
+			@include sizes(90vw, auto);
+			.rightbody__table--title {
+				@include sizes(60vw, auto);
+			}
+			table {
+				.rightbody__table--item {
+					font-size: 10px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 425px) {
+	.rightbody {
+		.rightbody__table {
+			@include sizes(90vw, auto);
+			.rightbody__table--title {
+				@include sizes(60vw, auto);
+			}
+			table {
+				.rightbody__table--innertitle {
+					font-size: 10px;
+				}
+				.rightbody__table--item {
+					font-size: 10px;
+				}
+			}
 		}
 	}
 }

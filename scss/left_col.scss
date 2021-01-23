@@ -52,7 +52,19 @@
 		width: auto;
 		margin-bottom: 5rem;
 		legend {
-			margin-bottom: 5rem;
+			margin-bottom: 3rem;
+		}
+		ul {
+			margin-bottom: 3rem;
+			.column__audiobox--item {
+				font-family: "Dosis", sans-serif;
+				color: $whiteColor;
+				span {
+					margin-right: 10px;
+					font-style: italic;
+					text-decoration: underline;
+				}
+			}
 		}
 		.column__audiobox--gif {
 			margin-top: 5rem;
@@ -86,13 +98,6 @@
 		border-right: none;
 		@include margin(5rem, 0rem, 5rem, 0rem);
 		width: 80vw;
-		.column--title {
-			@include sizes(40vw, auto);
-		}
-	}
-}
-@media (max-width: 730px) {
-	.column {
 		.column--title {
 			@include sizes(50vw, auto);
 		}

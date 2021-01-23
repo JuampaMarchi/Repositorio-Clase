@@ -32,7 +32,8 @@
       background-color: #525252;
       color: honeydew; }
       .rightbody .rightbody__table table .rightbody__table--innertitle {
-        font-family: "Goldman", sans-serif; }
+        font-family: "Goldman", sans-serif;
+        font-weight: normal; }
       .rightbody .rightbody__table table .rightbody__table--item {
         font-family: "Goldman", sans-serif;
         font-size: 16px; }
@@ -128,9 +129,63 @@
   .rightbody {
     justify-content: space-between;
     align-items: center; }
+    .rightbody .rightbody__table .rightbody__table--title {
+      width: 50vw;
+      height: auto; }
     .rightbody .rightbody__newsbox {
       width: 85vw;
+      height: auto; }
+      .rightbody .rightbody__newsbox .rightbody__newsbox--title {
+        width: 50vw;
+        height: auto; }
+    .rightbody .rightbody__carousel .rightbody__carousel--title {
+      width: 50vw;
       height: auto; } }
+
+@media (max-width: 768px) {
+  .rightbody .rightbody__newsbox .rightbody__newsbox__content {
+    display: flex;
+    flex-direction: column; }
+    .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--image {
+      width: 60vw;
+      height: 30rem; }
+    .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--date {
+      margin-top: 2rem;
+      text-align: right; }
+    .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--title {
+      padding: 1rem 0rem 1rem 0rem;
+      text-align: center; }
+    .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--comment {
+      padding: 1rem 0rem 1rem 0rem;
+      text-align: center; }
+    .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--text {
+      padding: 1rem 0rem 1rem 0rem;
+      text-align: center; }
+    .rightbody .rightbody__newsbox .rightbody__newsbox__content .newsbox__content--media {
+      padding: 1rem 0rem 1rem 0rem;
+      text-align: center; } }
+
+@media (max-width: 520px) {
+  .rightbody .rightbody__table {
+    width: 90vw;
+    height: auto; }
+    .rightbody .rightbody__table .rightbody__table--title {
+      width: 60vw;
+      height: auto; }
+    .rightbody .rightbody__table table .rightbody__table--item {
+      font-size: 10px; } }
+
+@media (max-width: 425px) {
+  .rightbody .rightbody__table {
+    width: 90vw;
+    height: auto; }
+    .rightbody .rightbody__table .rightbody__table--title {
+      width: 60vw;
+      height: auto; }
+    .rightbody .rightbody__table table .rightbody__table--innertitle {
+      font-size: 10px; }
+    .rightbody .rightbody__table table .rightbody__table--item {
+      font-size: 10px; } }
 
 @keyframes titleAnimation {
   25% {
@@ -184,7 +239,16 @@
     width: auto;
     margin-bottom: 5rem; }
     .column .column__audiobox legend {
-      margin-bottom: 5rem; }
+      margin-bottom: 3rem; }
+    .column .column__audiobox ul {
+      margin-bottom: 3rem; }
+      .column .column__audiobox ul .column__audiobox--item {
+        font-family: "Dosis", sans-serif;
+        color: honeydew; }
+        .column .column__audiobox ul .column__audiobox--item span {
+          margin-right: 10px;
+          font-style: italic;
+          text-decoration: underline; }
     .column .column__audiobox .column__audiobox--gif {
       margin-top: 5rem; }
   .column .column__recommended {
@@ -213,13 +277,8 @@
     margin: 5rem 0rem 5rem 0rem;
     width: 80vw; }
     .column .column--title {
-      width: 40vw;
+      width: 50vw;
       height: auto; } }
-
-@media (max-width: 730px) {
-  .column .column--title {
-    width: 50vw;
-    height: auto; } }
 
 @media (max-width: 560px) {
   .column .column--title {
